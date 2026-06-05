@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRoute, useLocation, Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -32,8 +32,11 @@ function useEmployeeDetail(id: string) {
   const [data, setData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [tick, setTick] = useState(0);
 
-  const refetch = () => {
+  const refetch = useCallback(() => setTick((t) => t + 1), []);
+
+  useEffect(() => {
     setIsLoading(true);
     const token = localStorage.getItem("fm_token");
     fetch(`/api/employees/${id}`, { headers: { Authorization: `Bearer ${token}` } })
@@ -41,9 +44,7 @@ function useEmployeeDetail(id: string) {
       .then((d) => { setData(d); setError(null); })
       .catch(() => setError("Errore nel caricamento"))
       .finally(() => setIsLoading(false));
-  };
-
-  if (isLoading && data === null && error === null) refetch();
+  }, [id, tick]);
 
   return { data, isLoading, error, refetch };
 }
