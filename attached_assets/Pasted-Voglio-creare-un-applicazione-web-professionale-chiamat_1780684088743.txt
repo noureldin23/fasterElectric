@@ -1,0 +1,349 @@
+Voglio creare un'applicazione web professionale chiamata "Faster Manager" per la gestione completa dei dipendenti e dei documenti aziendali.
+
+OBIETTIVO
+
+Realizzare un gestionale web moderno, responsive e professionale, utilizzabile da PC, tablet e smartphone.
+
+L'applicazione sarà utilizzata dalla mia azienda per gestire circa 60 dipendenti e migliaia di documenti.
+
+TECNOLOGIE RICHIESTE
+
+Frontend:
+
+* React
+* TypeScript
+* Tailwind CSS
+* Interfaccia moderna e professionale
+
+Backend:
+
+* Node.js
+* Express.js
+
+Database:
+
+* MySQL
+
+Storage file:
+
+* I documenti devono essere salvati sul server in cartelle organizzate
+* Nel database devono essere salvati solo i percorsi dei file
+
+Autenticazione:
+
+* JWT
+* Password criptate con bcrypt
+
+FUNZIONALITÀ PRINCIPALI
+
+1. LOGIN
+
+Creare un sistema di autenticazione con:
+
+Admin:
+
+* Username
+* Password
+
+Funzioni:
+
+* Login
+* Logout
+* Cambio password
+
+Solo gli utenti autenticati possono accedere al sistema.
+
+---
+
+2. DASHBOARD
+
+Mostrare:
+
+* Numero totale dipendenti
+* Numero totale documenti
+* Numero documenti in scadenza
+* Numero buste paga archiviate
+* Numero CUD archiviati
+* Ultimi documenti caricati
+* Ultime attività effettuate
+
+Grafici:
+
+* Documenti caricati per mese
+* Dipendenti attivi
+
+---
+
+3. GESTIONE DIPENDENTI
+
+Per ogni dipendente salvare:
+
+* ID interno automatico
+* Codice dipendente personalizzato
+* Nome
+* Cognome
+* Telefono
+* Email
+* Codice fiscale
+* IBAN
+* Data di nascita
+* Data assunzione
+* Mansione
+* Indirizzo
+* Stato (Attivo / Dimesso)
+* Note
+* Foto profilo
+
+Funzioni:
+
+* Creazione dipendente
+* Modifica dipendente
+* Eliminazione dipendente
+* Ricerca dipendente
+* Filtro dipendenti
+* Visualizzazione scheda completa
+
+---
+
+4. DOCUMENTI DIPENDENTE
+
+Ogni dipendente deve avere una sezione documenti.
+
+Per ogni documento salvare:
+
+* Nome documento
+* Categoria
+* Data inizio
+* Data fine
+* Data caricamento
+* Note
+* File allegato
+
+Categorie:
+
+* Contratto
+* Carta identità
+* Codice fiscale
+* Permesso di soggiorno
+* Patente
+* Corso sicurezza
+* Attestato
+* Visita medica
+* Certificazione
+* Altro
+
+Funzioni:
+
+* Upload documento
+* Download documento
+* Eliminazione documento
+* Modifica dati documento
+* Anteprima PDF e immagini
+
+---
+
+5. BUSTE PAGA
+
+Per ogni dipendente:
+
+* Anno
+* Mese
+* PDF
+
+Funzioni:
+
+* Upload
+* Download
+* Ricerca
+* Eliminazione
+
+---
+
+6. CUD / CERTIFICAZIONE UNICA
+
+Per ogni dipendente:
+
+* Anno
+* PDF
+
+Funzioni:
+
+* Upload
+* Download
+* Ricerca
+
+---
+
+7. DOCUMENTI AZIENDALI
+
+Sezione dedicata ai documenti aziendali.
+
+Categorie:
+
+* Visura camerale
+* DURC
+* Assicurazioni
+* Contratti clienti
+* Contratti fornitori
+* Certificazioni
+* Bilanci
+* Altro
+
+Funzioni:
+
+* Upload
+* Download
+* Ricerca
+* Eliminazione
+
+---
+
+8. SCADENZE AUTOMATICHE
+
+Il sistema deve monitorare automaticamente:
+
+* Contratti
+* Permessi di soggiorno
+* Patenti
+* Corsi sicurezza
+* Visite mediche
+* Certificazioni
+
+Dashboard:
+
+Rosso = scaduto
+Arancione = scade entro 30 giorni
+Verde = valido
+
+Notifiche automatiche.
+
+---
+
+9. RICERCA GLOBALE
+
+Barra di ricerca unica.
+
+Ricerca per:
+
+* Nome dipendente
+* Cognome
+* Codice fiscale
+* Codice dipendente
+* Nome documento
+* Categoria documento
+
+---
+
+10. STORICO ATTIVITÀ
+
+Registrare:
+
+* Login
+* Creazione dipendente
+* Modifica dipendente
+* Eliminazione dipendente
+* Upload documenti
+* Eliminazione documenti
+
+Mostrare:
+
+Data
+Ora
+Utente
+Operazione
+
+---
+
+11. BACKUP
+
+Creare sistema di backup automatico.
+
+Backup:
+
+* Database MySQL
+* Tutti i documenti
+
+Funzione:
+
+* Backup manuale
+* Backup automatico giornaliero
+
+---
+
+12. STRUTTURA FILE SERVER
+
+/uploads
+
+/dipendenti
+/ID_DIPENDENTE
+/documenti
+/buste_paga
+/cud
+/foto
+
+/azienda
+
+---
+
+13. DATABASE MYSQL
+
+Creare tutte le tabelle necessarie con:
+
+* Chiavi primarie
+* Foreign key
+* Indici
+* Relazioni corrette
+
+Generare script SQL completi.
+
+---
+
+14. SICUREZZA
+
+* Password hashate con bcrypt
+* JWT
+* Validazione input
+* Protezione upload file
+* Protezione SQL Injection
+* Protezione XSS
+
+---
+
+15. INTERFACCIA
+
+Tema moderno professionale.
+
+Menu laterale:
+
+Dashboard
+Dipendenti
+Documenti
+Buste Paga
+CUD
+Documenti Aziendali
+Scadenze
+Attività
+Backup
+Impostazioni
+
+Design simile a software aziendali professionali.
+
+---
+
+OUTPUT RICHIESTO
+
+Genera:
+
+1. Struttura completa del progetto
+2. Backend completo
+3. Frontend completo
+4. Script SQL completi
+5. API REST complete
+6. Gestione upload file
+7. Sistema login completo
+8. Dashboard completa
+9. Istruzioni di installazione
+10. File .env di esempio
+11. Codice pronto per essere eseguito senza parti mancanti
+
+Non usare codice placeholder o pseudocodice. Genera un progetto completo e professionale pronto per la produzione.

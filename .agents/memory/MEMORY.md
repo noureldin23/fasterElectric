@@ -1,0 +1,1 @@
+- [Faster Manager project](faster-manager.md) — full-stack Italian employee mgmt app; key quirks for seeding, auth, file uploads, and deep imports
